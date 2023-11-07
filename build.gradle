@@ -1,0 +1,25 @@
+
+plugins {
+    id 'java'
+}
+
+group 'guru.qa'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation (
+            "com.codeborne:selenide:6.3.5",
+            "org.junit.jupiter:junit-jupiter:5.8.2",
+            "org.slf4j:slf4j-simple:2.0.6",
+            "com.squareup.retrofit2:converter-gson:2.9.0",
+            "com.squareup.retrofit2:retrofit:2.9.0")
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+}
+
+test {
+    useJUnitPlatform()
+}
